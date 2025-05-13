@@ -6,6 +6,8 @@ import './App.css'
 import Home from './pages/Home';
 import Error from './pages/Error';
 import Signup from './pages/Signup';
+import Order from './pages/Order';
+import PlacedOrder from './pages/PlacedOrder';
 
 function App() {
  
@@ -16,6 +18,9 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='*' element={<Error/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      <Route path='/orders' element={<Order/>}/>
+      <Route path='/placeOrder' element={<PlacedOrder/>}/>
+
 
     </Routes>
     </BrowserRouter>

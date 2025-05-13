@@ -42,4 +42,12 @@
     background-color: rgb(148, 180, 193)
     ;
   }
+  .orderBUtton{
+    background-color: rgb(148, 180, 193);
+    color: black;
+  }
+  .orderBUtton:hover{
+    background-color: rgb(105, 141, 155);
+   color: white;
+  }
   

@@ -9,8 +9,10 @@ import {
   FaLinkedin,
   FaEye,
   FaEyeSlash,
+  FaUserCircle,
 } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { IoLogOutOutline } from "react-icons/io5";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,6 +25,8 @@ const Header = () => {
   const [isOtpVerified, setIsOtpVerified] = useState(false);
   const [countdown, setCountdown] = useState(0);
   const [newPassword, setNewPassword] = useState("");
+  const [isLoggedin, setIsLoggedIn] = useState(true);
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
 
   const navigate = useNavigate();
 
@@ -82,9 +86,46 @@ const Header = () => {
             Contact Us
           </Link>
         </li>
-        <button onClick={() => setShowLogin(true)} className="ml-4 link">
-          Login
-        </button>
+        {isLoggedin ? (
+          <div className="relative">
+            <FaUserCircle
+              className="text-xl cursor-pointer link"
+              onClick={() => setShowUserDropdown(!showUserDropdown)}
+            />
+            {showUserDropdown && (
+              <div className="absolute right-0 mt-2 w-36 bg-white border rounded shadow-lg z-50">
+                <Link
+                  to="/orders"
+                  className="block px-4 py-2 text-black hover:bg-gray-100 no-underline"
+                  onClick={() => setShowUserDropdown(false)}
+                >
+                  Profile
+                </Link>
+                <Link
+                  to="/placeOrder"
+                  className="block px-4 py-2 text-black hover:bg-gray-100 no-underline"
+                  onClick={() => setShowUserDropdown(false)}
+                >
+                  Place Order
+                </Link>
+                <button
+                  className="w-full text-left flex px-4 py-2 text-black hover:bg-gray-100"
+                  onClick={() => {
+                    setIsLoggedIn(false);
+                    setShowUserDropdown(false);
+                  }}
+                >
+                  Logout  
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          <button onClick={() => setShowLogin(true)} className="ml-4 link">
+            Login
+          </button>
+        )}
+
         <FaBell className="text-xl cursor-pointer" />
       </ul>
 
@@ -126,12 +167,56 @@ const Header = () => {
             Contact Us
           </Link>
 
-          <button
-            onClick={() => setShowLogin(true)}
-            className="text-left ms-4 link"
-          >
-            Login
-          </button>
+          {isLoggedin ? (
+            <div className="relative ms-4">
+              <FaUserCircle
+                className="text-xl cursor-pointer link"
+                onClick={() => setShowUserDropdown(!showUserDropdown)}
+              />
+              {showUserDropdown && (
+                <div className="absolute left-0 mt-2 w-36 bg-white border rounded shadow-lg z-50">
+                  <Link
+                    to="/orders"
+                    className="block px-4 py-2 no-underline text-black hover:bg-gray-100"
+                    onClick={() => {
+                      setShowUserDropdown(false);
+                      setMenuOpen(false);
+                    }}
+                  >
+                    Profile
+                  </Link>
+                  <Link
+                    to="/placeOrder"
+                    className="block px-4 py-2 no-underline text-black hover:bg-gray-100"
+                    onClick={() => {
+                      setShowUserDropdown(false);
+                      setMenuOpen(false);
+                    }}
+                  >
+                    Place Order
+                  </Link>
+                  <button
+                    className="w-full text-left px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => {
+                      setIsLoggedIn(false);
+                      setShowUserDropdown(false);
+                      setMenuOpen(false);
+                    }}
+                  >
+                    Logout  
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <button
+              onClick={() => setShowLogin(true)}
+              className="text-left ms-4 link"
+            >
+              Login
+            </button>
+          )}
+
           <FaBell className="text-xl ms-4" />
         </div>
       )}
@@ -207,9 +292,7 @@ const Header = () => {
                     }}
                     className="text-blue-600 cursor-pointer hover:underline"
                   >
-                    <Link to='/signup'>Register now
-                    </Link>
-                    
+                    <Link to="/signup">Register now</Link>
                   </span>
                 </p>
               </>
