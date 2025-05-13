@@ -1,1 +1,45 @@
 @import "tailwindcss";
+.no-underline{
+    text-decoration: none;
+}
+.link:hover{
+    color:rgb(84, 119, 146) !important;
+}
+.button{
+    color: white;
+    border-radius: 6px;
+    background-color:  rgb(33, 52, 72);
+    border: 2px solid   rgb(33, 52, 72);
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.button:hover{
+    background-color: white;
+    color: rgb(33, 52, 72);
+    border: 2px solid   rgb(33, 52, 72);
+}
+.bgblue{
+    background: rgb(33, 52, 72) ;
+    color: white;
+}
+.bg{
+    background: linear-gradient(to right, #AFD6FF 0%, #96b1cb 45%, #4a729d 100%);
+
+}
+.Space_Grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+    color: rgb(33, 52, 72) ;
+  }
+  .inter{
+    font-family: 'Inter', sans-serif;
+  }
+
+  .bgteam1{
+    background-color: rgb(239, 241, 244)
+
+    ;
+  }
+  .bgteam2{
+    background-color: rgb(148, 180, 193)
+    ;
+  }
+  
