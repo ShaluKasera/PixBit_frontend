@@ -52,7 +52,7 @@ const Signup = () => {
               onMouseLeave={() => setHoverGoogle(false)}
             >
               <FcGoogle className="text-2xl" />
-              Login with Google
+              Signup with Google
             </button>
 
             <button
@@ -66,7 +66,7 @@ const Signup = () => {
               onMouseLeave={() => setHoverFacebook(false)}
             >
               <FaFacebookSquare className="text-2xl text-blue-700" />
-              Login with Facebook
+              Signup with Facebook
             </button>
 
             <button
@@ -80,7 +80,7 @@ const Signup = () => {
               onMouseLeave={() => setHoverLinkedIn(false)}
             >
               <FaLinkedin className="text-2xl text-blue-700" />
-              Login with LinkedIn
+              Signup with LinkedIn
             </button>
           </form>
         </div>

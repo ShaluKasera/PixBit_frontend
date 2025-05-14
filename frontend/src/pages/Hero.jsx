@@ -2,6 +2,7 @@ import React from "react";
 import frontSite from "../assets/img2.png";
 import backSite from "../assets/img1.png";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -15,9 +16,9 @@ const Hero = () => {
           Running a business? A creator? Or just got that next-big-idea energy? We’ll help you launch it with a site that looks and feels like you
         </p>
         <div className="flex justify-center md:justify-start">
-          <button className="button px-4 py-2 flex items-center">
-            Order Now <MdKeyboardDoubleArrowRight className="text-xl ms-1 mt-0.5" />
-          </button>
+          <Link to='/placeOrder' className="button no-underline  px-4 py-2 flex items-center">
+            Order Now <MdKeyboardDoubleArrowRight className="text-xl ms-1 " />
+          </Link>
         </div>
       </div>
 

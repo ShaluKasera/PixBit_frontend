@@ -136,7 +136,7 @@ const MyOrder = () => {
               <div className="flex justify-end gap-3 mt-3">
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-1 bg-gray-300 rounded hover:bg-gray-400"
+                  className="px-4 py-1 bg-gray-300 rounded transition-all duration-500 hover:bg-gray-400"
                 >
                   Cancel
                 </button>

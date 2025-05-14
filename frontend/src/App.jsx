@@ -8,6 +8,9 @@ import Error from './pages/Error';
 import Signup from './pages/Signup';
 import PlacedOrder from './pages/PlacedOrder';
 import MyOrder from './pages/MyOrder';
+import Payment from './pages/Payment';
+
+import AdminPannel from './AdminSection/AdminPannel';
 
 function App() {
  
@@ -20,6 +23,8 @@ function App() {
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/orders' element={<MyOrder/>}/>
       <Route path='/placeOrder' element={<PlacedOrder/>}/>
+      <Route path='/payment' element={<Payment/>}/>
+      <Route path='/adminPannel' element={<AdminPannel/>}/>
 
 
     </Routes>

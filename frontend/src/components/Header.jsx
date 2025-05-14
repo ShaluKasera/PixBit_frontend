@@ -93,7 +93,7 @@ const Header = () => {
               onClick={() => setShowUserDropdown(!showUserDropdown)}
             />
             {showUserDropdown && (
-              <div className="absolute right-0 mt-2 w-36 bg-white border rounded shadow-lg z-50">
+              <div className="absolute right-0 mt-2 w-32 bg-white border rounded shadow-lg z-50">
                 <Link
                   to="/orders"
                   className="block px-4 py-2 text-black hover:bg-gray-100 no-underline"
@@ -101,13 +101,7 @@ const Header = () => {
                 >
                   Profile
                 </Link>
-                <Link
-                  to="/placeOrder"
-                  className="block px-4 py-2 text-black hover:bg-gray-100 no-underline"
-                  onClick={() => setShowUserDropdown(false)}
-                >
-                  Place Order
-                </Link>
+               
                 <button
                   className="w-full text-left flex px-4 py-2 text-black hover:bg-gray-100"
                   onClick={() => {
@@ -174,7 +168,7 @@ const Header = () => {
                 onClick={() => setShowUserDropdown(!showUserDropdown)}
               />
               {showUserDropdown && (
-                <div className="absolute left-0 mt-2 w-36 bg-white border rounded shadow-lg z-50">
+                <div className="absolute left-0 mt-2 w-28 bg-white border rounded shadow-lg z-50">
                   <Link
                     to="/orders"
                     className="block px-4 py-2 no-underline text-black hover:bg-gray-100"
@@ -185,16 +179,7 @@ const Header = () => {
                   >
                     Profile
                   </Link>
-                  <Link
-                    to="/placeOrder"
-                    className="block px-4 py-2 no-underline text-black hover:bg-gray-100"
-                    onClick={() => {
-                      setShowUserDropdown(false);
-                      setMenuOpen(false);
-                    }}
-                  >
-                    Place Order
-                  </Link>
+                  
                   <button
                     className="w-full text-left px-4 py-2 text-black hover:bg-gray-100"
                     onClick={() => {

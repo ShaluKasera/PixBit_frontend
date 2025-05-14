@@ -205,15 +205,15 @@ const PlacedOrder = () => {
             </select>
 
             <div className="md:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-              <Link to="/" className="text-blue-600 underline text-sm sm:text-base">
+              <Link to="/" className="text-blue-600 no-underline text-sm sm:text-base">
                 Terms and Conditions
               </Link>
-              <button
+              <Link to='/payment'
                 type="submit"
-                className="button px-6 py-2 rounded hover:bg-blue-700 transition w-full sm:w-auto"
+                className="button no-underline px-6 py-2 rounded hover:bg-blue-700 transition w-full sm:w-auto"
               >
                 Place Order
-              </button>
+              </Link>
             </div>
           </form>
         </div>
