@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { CiEdit } from "react-icons/ci";
-import OrdersComponents from "../components/OrdersComponents";
-import DeliveredComponents from "../components/DeliveredComponents";
-import OrderedCancelledComponents from "../components/OrderedCancelledComponents";
+import OrdersComponents from "./OrderComponents";
+import DeliveredComponents from "./DeliveredComponents";
+import OrderedCancelledComponents from "./CancelledComponents";
 
-const MyOrder = () => {
+const Profile = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [name, setName] = useState("Shalu Kumari");
   const [email, setEmail] = useState("shalukumari93129@gmail.com");
@@ -155,4 +155,4 @@ const MyOrder = () => {
   );
 };
 
-export default MyOrder;
+export default Profile;

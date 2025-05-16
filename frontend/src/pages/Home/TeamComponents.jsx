@@ -10,7 +10,7 @@ import {
   FaRegCopyright,
 } from "react-icons/fa";
 
-const Team = () => {
+const TeamComponents = () => {
   return (
     <div className="bg-white rounded p-2 sm:p-4 md:p-6">
       {/* Image section */}
@@ -44,4 +44,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default TeamComponents;

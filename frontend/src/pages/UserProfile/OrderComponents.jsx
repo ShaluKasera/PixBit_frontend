@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OrdersComponents = () => {
+const OrderComponents = () => {
   return (
     <div className='border shadow rounded-2xl p-4'>
         <p className='Space_Grotesk text-2xl font-bold w-[170px] text-center'>
@@ -25,4 +25,4 @@ const OrdersComponents = () => {
   )
 }
 
-export default OrdersComponents
+export default OrderComponents

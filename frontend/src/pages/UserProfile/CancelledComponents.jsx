@@ -1,6 +1,6 @@
 import React from "react";
 
-const OrderedCancelledComponents = () => {
+const CancelledComponents = () => {
   return (
     <div className="border shadow rounded-2xl p-4">
       <p className="Space_Grotesk text-2xl font-bold w-[170px] text-center">
@@ -16,4 +16,4 @@ const OrderedCancelledComponents = () => {
   );
 };
 
-export default OrderedCancelledComponents;
+export default CancelledComponents;

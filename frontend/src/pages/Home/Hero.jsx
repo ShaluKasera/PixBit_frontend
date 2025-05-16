@@ -1,6 +1,6 @@
 import React from "react";
-import frontSite from "../assets/img2.png";
-import backSite from "../assets/img1.png";
+import frontSite from "../../assets/img2.png";
+import backSite from "../../assets/img1.png";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -13,11 +13,22 @@ const Hero = () => {
           We Don’t Just Build Sites. We Build Hype
         </h2>
         <p className="text-sm sm:text-base mb-6 font-[Inter]">
-          Running a business? A creator? Or just got that next-big-idea energy? We’ll help you launch it with a site that looks and feels like you
+          Running a business? A creator? Or just got that next-big-idea energy?
+          We’ll help you launch it with a site that looks and feels like you
         </p>
-        <div className="flex justify-center md:justify-start">
-          <Link to='/placeOrder' className="button no-underline  px-4 py-2 flex items-center">
-            Order Now <MdKeyboardDoubleArrowRight className="text-xl ms-1 " />
+        <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-10 md:justify-start justify-center items-center">
+          <Link
+            to="/placeOrder"
+            className="button no-underline px-4 py-2 flex items-center"
+          >
+            Order Now <MdKeyboardDoubleArrowRight className="text-xl ms-1" />
+          </Link>
+          <Link
+            to="/pastProjects"
+            className="button no-underline px-4 py-2 flex items-center"
+          >
+            Past Projects{" "}
+            <MdKeyboardDoubleArrowRight className="text-xl ms-1" />
           </Link>
         </div>
       </div>
@@ -32,7 +43,7 @@ const Hero = () => {
         <img
           src={frontSite}
           alt="Front site"
-          className="absolute top-8 sm:top-10 left-0 w-[80%] rounded-lg shadow-2xl z-20"
+          className="absolute top-8 sm:top-28  w-[80%] rounded-lg shadow-2xl z-20"
         />
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import TeamSection from "../components/TeamSection";
+import TeamSection from "./TeamComponents";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Team = () => {
